@@ -59,7 +59,7 @@ async function searchBlogs() {
         <div style="display: flex; justify-content: space-between;">
             <span>by <span style="font-weight: bold; color: rgb(11, 34, 188); cursor: pointer;" onclick="window.location.href = '/html/user.html?id=${authors[i]["_id"]}'"><u>${authors[i]["username"]}</u></span></span>
             <div></div>
-            <div style="opacity: ${blogs[i]["likes"].includes(me["_id"]) ? 1 : 0}">
+            <div style="opacity: ${blogs[i]["likes"] && me && blogs[i]["likes"].includes(me["_id"]) ? 1 : 0}">
                 <img src="../images/heart-2.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
                 <span>Your Favourite</span>
             </div>

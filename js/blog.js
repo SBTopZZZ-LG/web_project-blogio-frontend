@@ -36,7 +36,7 @@ async function loadBlog() {
         author = responsebody["result"]["user"]
     }
 
-    const liked = blog["likes"].includes(me["_id"])
+    const liked = me && blog["likes"].includes(me["_id"])
 
     document.getElementById("result").insertAdjacentHTML(
         "beforeend",
