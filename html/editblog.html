@@ -18,9 +18,12 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid" style="display: inline-flex; justify-content: left;">
+                <!-- Blog.io icon -->
                 <img src="../images/blog.png" alt="Favicon" width="25px" height="25px"
                     style="margin-left: 10px; margin-right: 10px; cursor: pointer;"
                     onclick="window.location.href = '/index.html'" />
+
+                <!-- Blog.io text -->
                 <a class="navbar-brand" href="/index.html">Blog.io</a>
             </div>
         </nav>
@@ -30,15 +33,21 @@
         <div class="card-body" style="margin: 10px;">
             <h2>Edit Blog</h2>
             <br>
+            
+            <!-- Title of the body text field -->
             <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="titlefield" placeholder="name@example.com">
                 <label for="floatingInput">Title of the Blog</label>
             </div>
+
+            <!-- Informative text -->
             <span><strong>A best blog comprises of a title that is capable of expressing the general idea of the blog
                     concisely
                     and within a few span of words.</strong></span>
             <br />
             <br />
+
+            <!-- Body of the blog -->
             <div class="form-floating">
                 <textarea class="form-control" placeholder="Body of the blog" id="bodyfield"
                     style="height: 400px"></textarea>
@@ -46,8 +55,12 @@
                     line and then the content</label>
             </div>
             <br />
+
+            <!-- Container containing the three buttons -->
             <div style="width: 100%; height: fit-content; display: inline-flex; justify-content: space-between;">
+                <!-- Use all space on the left side (shifts buttons to the right) -->
                 <div></div>
+
                 <div>
                     <a class="btn btn-outline-danger" onclick="deleteblog();" style="margin-right: 10px;">Delete
                         blog</a>
@@ -58,6 +71,7 @@
             <br />
             <hr />
             <br />
+            
             <div style="width: 100%; display: inline-flex; justify-content: center;">
                 <p style="margin-top: auto; margin-bottom: auto; margin-right: 25px;">Confused thinking how to implement
                     your exciting ideas? See what makes a blog great!

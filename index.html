@@ -42,27 +42,31 @@
     }
 </script>
 
-<body onload="onstart();">
+<body onload="onstart();" style="overflow-x: hidden;">
     <!-- Nav bar -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+            <div class="container-fluid" style="display: inline-flex; justify-content: left;">
+                <!-- Blog.io icon -->
                 <img src="./images/blog.png" alt="Favicon" width="25px" height="25px"
                     style="margin-left: 10px; margin-right: 10px; cursor: pointer;" />
+
+                <!-- Blog.io text -->
                 <a class="navbar-brand" href="#">Blog.io</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent"
                     style="display: flex; justify-content: space-between;">
+                    <!-- Search field and button -->
                     <form class="d-flex">
                         <input id="search_blog" class="form-control me-2" type="search" placeholder="Search"
                             aria-label="Search">
                         <a class="btn btn-outline-dark" onclick="navig();">Search</a>
                     </form>
+
+                    <!-- Occupy free space (aligns user state view to the right) -->
                     <div></div>
+
+                    <!-- Components based on user state view (created dynamically) -->
                     <div id="user_state_view" style="display: inline-flex;">
                     </div>
                 </div>
@@ -90,27 +94,8 @@
         </div>
     </div>
 
-    <!-- Results -->
-    <div id="results">
-        <!-- <div class="card-body">
-            <h5 class="card-title" style="cursor: pointer;">Why blockchain is so secure?</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet, lacus nec semper
-                consectetur, magna massa lobortis odio, vitae malesuada lorem ex vitae justo. Maecenas eget tellus eget
-                nunc fermentum tincidunt at sed ex. Maecenas fringilla nunc quis justo tincidunt lacinia. Donec pretium,
-                nunc sit amet venenatis rutrum, nisi metus sodales nunc, id placerat ipsum nisi in dolor. Proin ut massa
-                elit. Etiam ut massa a quam viverra mattis et sed ex.</p>
-            <div style="display: flex; justify-content: space-between;">
-                <span>by <span style="font-weight: bold; color: rgb(11, 34, 188); cursor: pointer;"><u>Saumitra
-                            Topinkatti</u></span></span>
-                <div></div>
-                <a href="#" class="btn btn-light">
-                    <img src="images/heart.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
-                    Add to Favourites
-                </a>
-            </div>
-        </div>
-        <hr /> -->
-    </div>
+    <!-- Blogs (created dynamically) -->
+    <div id="results" style="padding-left: 10%; padding-right: 10%;"></div>
 </body>
 
 </html>

@@ -39,19 +39,21 @@
     <!-- Nav bar -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+            <div class="container-fluid" style="display: inline-flex; justify-content: left;">
+                <!-- Blog.io icon -->
                 <img src="../images/blog.png" alt="Favicon" width="25px" height="25px"
                     style="margin-left: 10px; margin-right: 10px; cursor: pointer;"
                     onclick="window.location.href = '/index.html'" />
+                
+                <!-- Blog.io text -->
                 <a class="navbar-brand" href="/index.html">Blog.io</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent"
                     style="display: flex; justify-content: space-between;">
+                    <!-- Occupy free space (aligns user state view to the right) -->
                     <div></div>
+
+                    <!-- Components based on user state (created dynamically) -->
                     <div id="user_state_view" style="display: inline-flex;">
                     </div>
                 </div>
@@ -59,17 +61,8 @@
         </nav>
     </header>
 
-    <!-- Result -->
-    <div id="result" style="height: 100%; margin: 30px;">
-        <!-- <h1 class="card-title" style="cursor: pointer;">Saumitra Topinkatti</h1>
-        <hr />
-        <h3>About Me</h3>
-        <p class="card-text">Hi! My name is Saumitra Topinkatti.<br>
-            I am 19 years old, I love programming, eating, sleeping, and gaming.<br>
-            I'm an undergraduate student in KLS GIT, Belgaum.<br>
-            My favourite programming languages: C++, C#, Java, Javascript, Dart<br>
-            My favourite frameworks: Flutter, React.js, Firebase, MongoDB, MySQL, Node.js, Express.js</p> -->
-    </div>
+    <!-- User details (created dynamically) -->
+    <div id="result" style="padding-left: 10%; padding-right: 10%; padding-bottom: 50px; padding-top: 50px;"></div>
 </body>
 
 </html>

@@ -39,25 +39,27 @@
     <!-- Nav bar -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+            <div class="container-fluid" style="display: inline-flex; justify-content: left;">
+                <!-- Blog.io icon -->
                 <img src="../images/blog.png" alt="Favicon" width="25px" height="25px"
                     style="margin-left: 10px; margin-right: 10px; cursor: pointer;"
                     onclick="window.location.href = '/index.html'" />
+
+                <!-- Blog.io text -->
                 <a class="navbar-brand" href="/index.html">Blog.io</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
+                <!-- Occupy free space -->
                 <div style="width: 100%;"></div>
+
+                <!-- Display create button and user name with options if user is SIGNED IN, otherwise display log in button (created dynamically) -->
                 <div id="user_state_view" style="display: inline-flex;">
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Result -->
-    <div id="result" style="width: 100%; height: 100%; margin: 30px;">
+    <!-- Blog preview (created dynamically) -->
+    <div id="result" style="padding-left: 10%; padding-right: 10%; padding-bottom: 50px; padding-top: 50px;">
     </div>
 </body>
 
