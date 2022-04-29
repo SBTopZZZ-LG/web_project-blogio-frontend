@@ -1,5 +1,5 @@
 async function getBlog(blog_id) {
-    var result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/one?id=${blog_id}`,
+    var result = await fetch(`http://localhost:3000/blog/one?id=${blog_id}`,
         {
             method: "GET"
         })

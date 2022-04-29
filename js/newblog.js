@@ -26,7 +26,7 @@ async function create() {
     // Before posting, replace all new lines with breaks
     body = body.split("\n").join("<br/>")
 
-    const result = await fetch('https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/create',
+    const result = await fetch('http://localhost:3000/blog/create',
         {
             method: "POST",
             headers: {

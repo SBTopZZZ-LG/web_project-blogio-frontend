@@ -1,5 +1,5 @@
 async function getUser(user_id) {
-    var result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/user?id=${user_id}`,
+    var result = await fetch(`http://localhost:3000/user?id=${user_id}`,
         {
             method: "GET"
         })
@@ -10,7 +10,7 @@ async function getUser(user_id) {
     return responsebody["result"]["user"]
 }
 async function getBlog(blog_id) {
-    var result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/one?id=${blog_id}`,
+    var result = await fetch(`http://localhost:3000/blog/one?id=${blog_id}`,
         {
             method: "GET"
         })
@@ -26,7 +26,7 @@ async function searchBlogs() {
 
     const searchQuery = queries.get("keyword")
 
-    const result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/search?query=${searchQuery}`,
+    const result = await fetch(`http://localhost:3000/blog/search?query=${searchQuery}`,
         {
             method: "GET"
         })
