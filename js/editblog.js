@@ -48,7 +48,7 @@ async function deleteblog() {
     window.alert("Blog was deleted")
 
     // Navigate to home page
-    window.location.href = "/index.html"
+    window.location.href = "/web_project-blogio-frontend/index.html"
 }
 async function preview() {
     const title = document.getElementById("titlefield").value
@@ -62,7 +62,7 @@ async function preview() {
     localStorage.setItem("saved_body", body)
 
     // Navigate to blog_preview
-    window.open('/html/blogpreview.html', '_blank')
+    window.open('/web_project-blogio-frontend/html/blogpreview.html', '_blank')
 }
 async function edit() {
     const queryString = window.location.search
@@ -105,5 +105,5 @@ async function edit() {
     window.alert("Blog edited")
 
     // Navigate to that blog
-    window.location.href = `/html/blog.html?id=${blog_id}`
+    window.location.href = `/web_project-blogio-frontend/html/blog.html?id=${blog_id}`
 }

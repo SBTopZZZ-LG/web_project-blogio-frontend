@@ -113,14 +113,14 @@ async function loadBlogs() {
         document.getElementById("results").insertAdjacentHTML(
             "beforeend",
             `<div class="card-body">
-        <h5 class="card-title" style="cursor: pointer;" onclick="window.location.href = '/html/blog.html?id=${blogs[i]["_id"]}'">${blogs[i]["title"]}</h5>
+        <h5 class="card-title" style="cursor: pointer;" onclick="window.location.href = '/web_project-blogio-frontend/html/blog.html?id=${blogs[i]["_id"]}'">${blogs[i]["title"]}</h5>
         <p class="card-text">${blogs[i]["body"].split("<br/>")[0]}</p>
         <!-- Action Buttons -->
         <div style="display: flex; justify-content: space-between;">
-            <span>by <span style="font-weight: bold; color: rgb(11, 34, 188); cursor: pointer;" onclick="window.location.href = '/html/user.html?id=${authors[i]["_id"]}'"><u>${authors[i]["username"]}</u></span></span>
+            <span>by <span style="font-weight: bold; color: rgb(11, 34, 188); cursor: pointer;" onclick="window.location.href = '/web_project-blogio-frontend/html/user.html?id=${authors[i]["_id"]}'"><u>${authors[i]["username"]}</u></span></span>
             <div></div>
             <div style="opacity: ${blogs[i]["likes"] && me && blogs[i]["likes"].includes(me["_id"]) ? 1 : 0}">
-                <img src="images/heart-2.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
+                <img src="/web_project-blogio-frontendimages/heart-2.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
                 <span>Your Favourite</span>
             </div>
         </div>
@@ -139,7 +139,7 @@ function placeSignInButton() {
 
     document.getElementById("user_state_view").insertAdjacentHTML(
         'beforeend',
-        `<a id="userauth_button" class="btn btn-dark" href="/html/signin.html" style="margin-left: 10px">Login</a>`
+        `<a id="userauth_button" class="btn btn-dark" href="/web_project-blogio-frontend/html/signin.html" style="margin-left: 10px">Login</a>`
     )
 }
 function placeSignedInView(username, imagelocation) {
@@ -147,8 +147,8 @@ function placeSignedInView(username, imagelocation) {
 
     document.getElementById("user_state_view").insertAdjacentHTML(
         'beforeend',
-        `<a class="btn btn-primary" id="createBlog" style="background-color: transparent; display: inline-flex;" href="/html/newblog.html">
-        <img src="${imagelocation || "./images/create.png"}" width="25px" height="25px" alt="" style="margin-right: 5px;" />
+        `<a class="btn btn-primary" id="createBlog" style="background-color: transparent; display: inline-flex;" href="/web_project-blogio-frontend/html/newblog.html">
+        <img src="${imagelocation || "/web_project-blogio-frontend/images/create.png"}" width="25px" height="25px" alt="" style="margin-right: 5px;" />
         <span style="color: black;"><strong>Create</strong></span>
     </a>
     <div class="dropdown">
@@ -157,11 +157,11 @@ function placeSignedInView(username, imagelocation) {
             Signed in as ${username}
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="/html/me.html">My Profile</a></li>
+            <li><a class="dropdown-item" href="/web_project-blogio-frontend/html/me.html">My Profile</a></li>
             <li>
                 <hr />
             </li>
-            <li><a class="dropdown-item" onclick="signOut(); window.location.href = '/index.html'">Logout</a></li>
+            <li><a class="dropdown-item" onclick="signOut(); window.location.href = '/web_project-blogio-frontend/index.html'">Logout</a></li>
         </ul>
     </div>`
     )

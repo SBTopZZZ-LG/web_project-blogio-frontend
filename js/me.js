@@ -34,13 +34,13 @@ async function loadMe() {
         document.getElementById("my_blogs").insertAdjacentHTML(
             'beforeend',
             `<div class="card-body">
-    <h5 class="card-title" style="cursor: pointer;" onclick="window.location.href = '/html/blog.html?id=${blogs[i]["_id"]}'">${blogs[i]["title"]}</h5>
+    <h5 class="card-title" style="cursor: pointer;" onclick="window.location.href = '/web_project-blogio-frontend/html/blog.html?id=${blogs[i]["_id"]}'">${blogs[i]["title"]}</h5>
     <p class="card-text">${blogs[i]["body"].split("<br/>")[0]}</p>
     <!-- Action Buttons -->
     <div style="display: flex; justify-content: space-between;">
         <div></div>
         <div style="opacity: ${blogs[i]["likes"].includes(user["_id"]) ? 1 : 0}">
-            <img src="../images/heart-2.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
+            <img src="/web_project-blogio-frontend/images/heart-2.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
             <span>Your Favourite</span>
         </div>
     </div>

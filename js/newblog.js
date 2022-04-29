@@ -10,7 +10,7 @@ async function preview() {
     localStorage.setItem("saved_body", body)
 
     // Navigate to blog_preview
-    window.open('/html/blogpreview.html', '_blank')
+    window.open('/web_project-blogio-frontend/html/blogpreview.html', '_blank')
 }
 
 async function create() {
@@ -52,5 +52,5 @@ async function create() {
     const responsebody = await result.json()
     const blog_id = responsebody["result"]["blog"]["_id"]
 
-    window.location.href = `/html/blog.html?id=${blog_id}`
+    window.location.href = `/web_project-blogio-frontend/html/blog.html?id=${blog_id}`
 }

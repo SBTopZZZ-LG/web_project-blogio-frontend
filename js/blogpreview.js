@@ -22,7 +22,7 @@ async function loadBlog() {
         <div style="display: flex; justify-content: space-between; margin-bottom: 50px;">
             <div></div>
             <a href="#" class="btn btn-light">
-                <img src="/images/heart.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
+                <img src="/web_project-blogio-frontend/images/heart.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
                 Add to Favourites
             </a>
         </div>
@@ -30,7 +30,7 @@ async function loadBlog() {
         <p>${body}</p>
         <hr/>
         <span>Article by <span
-                    style="font-weight: bold; color: rgb(11, 34, 188); cursor: pointer; margin-top: auto; margin-bottom: auto;" onclick="window.location.href = '/html/user.html?id=${user["_id"]}'"><u>${user["username"]}</u></span></span>
+                    style="font-weight: bold; color: rgb(11, 34, 188); cursor: pointer; margin-top: auto; margin-bottom: auto;" onclick="window.location.href = '/web_project-blogio-frontend/html/user.html?id=${user["_id"]}'"><u>${user["username"]}</u></span></span>
         <br/>
                     <i>“${user["bio"]}”</i>`
     )

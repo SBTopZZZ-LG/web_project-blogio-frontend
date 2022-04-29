@@ -22,7 +22,7 @@ async function loadBlog() {
         // Place edit button
         document.getElementById("user_state_view2").insertAdjacentHTML(
             'beforeend',
-            `<a class="btn btn-outline-primary" href='/html/editblog.html?id=${blog["_id"]}'>Edit Blog</a>`
+            `<a class="btn btn-outline-primary" href='/web_project-blogio-frontend/html/editblog.html?id=${blog["_id"]}'>Edit Blog</a>`
         )
 
     // Change title
@@ -44,7 +44,7 @@ async function loadBlog() {
         <div style="display: flex; justify-content: space-between; margin-bottom: 50px;">
             <div></div>
             <a onclick="${liked ? "dislikeBlog('$')".replace("$", blog["_id"]) : "likeBlog('$')".replace("$", blog["_id"])};" class="btn btn-light">
-                <img src="/images/${liked ? "heart-2" : "heart"}.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
+                <img src="/web_project-blogio-frontend/images/${liked ? "heart-2" : "heart"}.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
                 <span>${liked ? "Added to your Favourites" : "Add to Favourites"}</span>
             </a>
         </div>
@@ -52,7 +52,7 @@ async function loadBlog() {
         <p>${blog["body"]}</p>
         <hr/>
         <span>Article by <span
-                    style="font-weight: bold; color: rgb(11, 34, 188); cursor: pointer; margin-top: auto; margin-bottom: auto;" onclick="window.location.href = '/html/user.html?id=${author["_id"]}'"><u>${author["username"]}</u></span></span>
+                    style="font-weight: bold; color: rgb(11, 34, 188); cursor: pointer; margin-top: auto; margin-bottom: auto;" onclick="window.location.href = '/web_project-blogio-frontend/html/user.html?id=${author["_id"]}'"><u>${author["username"]}</u></span></span>
         <br/>
                     <i>“${author["bio"]}”</i>`
     )
