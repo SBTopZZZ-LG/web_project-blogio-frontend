@@ -18,7 +18,7 @@ async function saveDetails(callback) {
     if (!/[a-z0-9\._]+@[a-z0-9\._]+/.test(email))
         return window.alert("Invalid email")
 
-    const result = await fetch('http://localhost:3000/user',
+    const result = await fetch('https://webproject-blogio-backend.sbtopzzzlg.repl.co/user',
         {
             method: "PATCH",
             headers: {

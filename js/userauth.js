@@ -1,5 +1,5 @@
 async function register(username, email, password, callback) {
-    const result = await fetch('http://localhost:3000/user/signUp',
+    const result = await fetch('https://webproject-blogio-backend.sbtopzzzlg.repl.co/user/signUp',
         {
             method: "POST",
             headers: {
@@ -18,7 +18,7 @@ async function register(username, email, password, callback) {
     return callback(true)
 }
 async function login(email, password, callback) {
-    const result = await fetch('http://localhost:3000/user/signIn',
+    const result = await fetch('https://webproject-blogio-backend.sbtopzzzlg.repl.co/user/signIn',
         {
             method: "POST",
             headers: {
@@ -51,7 +51,7 @@ async function loginHeadless(callback) {
     if (!localStorage.getItem("LOGINTOKEN"))
         return callback(false)
 
-    const result = await fetch('http://localhost:3000/user/signInWithLoginToken',
+    const result = await fetch('https://webproject-blogio-backend.sbtopzzzlg.repl.co/user/signInWithLoginToken',
         {
             method: "POST",
             headers: {
@@ -76,7 +76,7 @@ async function getSignedUser() {
     if (!localStorage.getItem("LOGINTOKEN"))
         return;
 
-    const result = await fetch('http://localhost:3000/user/get',
+    const result = await fetch('https://webproject-blogio-backend.sbtopzzzlg.repl.co/user/get',
         {
             method: "POST",
             headers: {

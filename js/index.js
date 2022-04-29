@@ -1,5 +1,5 @@
 async function getUser(user_id) {
-    var result = await fetch(`http://localhost:3000/user?id=${user_id}`,
+    var result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/user?id=${user_id}`,
         {
             method: "GET"
         })
@@ -10,7 +10,7 @@ async function getUser(user_id) {
     return responsebody["result"]["user"]
 }
 async function getBlog(blog_id) {
-    var result = await fetch(`http://localhost:3000/blog/one?id=${blog_id}`,
+    var result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/one?id=${blog_id}`,
         {
             method: "GET"
         })
@@ -21,7 +21,7 @@ async function getBlog(blog_id) {
     return responsebody["result"]["blog"]
 }
 async function likeBlog(blog_id) {
-    await fetch('http://localhost:3000/blog/like',
+    await fetch('https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/like',
         {
             method: "POST",
             headers: {
@@ -37,7 +37,7 @@ async function likeBlog(blog_id) {
     window.location.reload()
 }
 async function dislikeBlog(blog_id) {
-    await fetch('http://localhost:3000/blog/dislike',
+    await fetch('https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/dislike',
         {
             method: "POST",
             headers: {
@@ -58,14 +58,14 @@ async function loadBlogs() {
 
     const mode = queries.get("type") || "toprated"
 
-    var url = "http://localhost:3000/blog"
+    var url = "https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog"
     document.getElementById("dropdownMenuButton1").innerHTML = "Viewing by <b>Top Rated</b>"
     var result = null
     if (mode === "latest") {
-        url = "http://localhost:3000/blog/last24hrs"
+        url = "https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/last24hrs"
         document.getElementById("dropdownMenuButton1").innerHTML = "Viewing by <b>Latest</b>"
     } else if (mode === "favourite") {
-        url = "http://localhost:3000/blog/liked"
+        url = "https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/liked"
         document.getElementById("dropdownMenuButton1").innerHTML = "Viewing by <b>Favourite</b>"
 
         result = await fetch(url,

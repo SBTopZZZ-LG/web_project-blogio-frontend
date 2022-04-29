@@ -7,7 +7,7 @@ async function loadBlog() {
     if (!blog_id)
         return window.alert("Failed to load blog")
 
-    const result = await fetch(`http://localhost:3000/blog/one?id=${blog_id}`,
+    const result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/one?id=${blog_id}`,
         {
             method: "GET"
         })
@@ -30,7 +30,7 @@ async function deleteblog() {
 
     const blog_id = queries.get("id")
 
-    const result = await fetch('http://localhost:3000/blog/delete',
+    const result = await fetch('https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/delete',
         {
             method: "DELETE",
             headers: {
@@ -82,7 +82,7 @@ async function edit() {
     // Before posting, replace all new lines with breaks
     body = body.split("\n").join("<br/>")
 
-    const result = await fetch('http://localhost:3000/blog/update',
+    const result = await fetch('https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/update',
         {
             method: "PATCH",
             headers: {

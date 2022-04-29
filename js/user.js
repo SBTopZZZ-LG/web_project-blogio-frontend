@@ -6,7 +6,7 @@ async function loadUser() {
     if (!user_id)
         return window.alert("User id required")
 
-    const result = await fetch(`http://localhost:3000/user?id=${user_id}`,
+    const result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/user?id=${user_id}`,
         {
             method: "GET"
         })

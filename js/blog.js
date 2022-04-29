@@ -6,7 +6,7 @@ async function loadBlog() {
     if (!blog_id)
         return window.alert("Blog id required")
 
-    var result = await fetch(`http://localhost:3000/blog/one?id=${blog_id}`,
+    var result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/one?id=${blog_id}`,
         {
             method: "GET"
         })
@@ -28,7 +28,7 @@ async function loadBlog() {
     // Change title
     document.title = `${blog["title"]} - Blog.io`
 
-    result = await fetch(`http://localhost:3000/user?id=${blog["author"]}`)
+    result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/user?id=${blog["author"]}`)
 
     var author = null
     if (result.status === 200) {
