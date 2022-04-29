@@ -120,7 +120,7 @@ async function loadBlogs() {
             <span>by <span style="font-weight: bold; color: rgb(11, 34, 188); cursor: pointer;" onclick="window.location.href = '/web_project-blogio-frontend/html/user.html?id=${authors[i]["_id"]}'"><u>${authors[i]["username"]}</u></span></span>
             <div></div>
             <div style="opacity: ${blogs[i]["likes"] && me && blogs[i]["likes"].includes(me["_id"]) ? 1 : 0}">
-                <img src="/web_project-blogio-frontendimages/heart-2.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
+                <img src="/web_project-blogio-frontend/images/heart-2.png" alt="" width="25px" height="25px" style="margin-right: 10px;" />
                 <span>Your Favourite</span>
             </div>
         </div>
