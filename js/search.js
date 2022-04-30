@@ -26,7 +26,7 @@ async function searchBlogs() {
 
     const searchQuery = queries.get("keyword")
 
-    const result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/search?query=${searchQuery}`,
+    const result = await fetch(`https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/search/v2?query=${searchQuery}`,
         {
             method: "GET"
         })
@@ -37,7 +37,7 @@ async function searchBlogs() {
     const blogs_raw = responsebody["result"]["blogs"]
     var blogs = [], authors = []
     for (var i = 0; i < blogs_raw.length; i++) {
-        blogs.push(await getBlog(blogs_raw[i]))
+        blogs.push(blogs_raw[i])
         authors.push(await getUser(blogs[i]["author"]))
     }
 

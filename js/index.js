@@ -58,14 +58,14 @@ async function loadBlogs() {
 
     const mode = queries.get("type") || "toprated"
 
-    var url = "https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog"
+    var url = "https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/v2"
     document.getElementById("dropdownMenuButton1").innerHTML = "Viewing by <b>Top Rated</b>"
     var result = null
     if (mode === "latest") {
-        url = "https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/last24hrs"
+        url = "https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/last24hrs/v2"
         document.getElementById("dropdownMenuButton1").innerHTML = "Viewing by <b>Latest</b>"
     } else if (mode === "favourite") {
-        url = "https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/liked"
+        url = "https://webproject-blogio-backend.sbtopzzzlg.repl.co/blog/liked/v2"
         document.getElementById("dropdownMenuButton1").innerHTML = "Viewing by <b>Favourite</b>"
 
         result = await fetch(url,
@@ -95,9 +95,9 @@ async function loadBlogs() {
 
     console.log(blogs)
 
-    for (var i = 0; i < blogs.length; i++)
-        blogs[i] = await getBlog(blogs[i])
-    blogs = blogs.filter(blog => !!blog)
+    // for (var i = 0; i < blogs.length; i++)
+    //     blogs[i] = await getBlog(blogs[i])
+    // blogs = blogs.filter(blog => !!blog)
 
     var authors = []
     for (var i = 0; i < blogs.length; i++)
